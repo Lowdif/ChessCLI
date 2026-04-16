@@ -7,7 +7,7 @@ class Piece {
         else this.team = Piece.localTeam.WHITE;
     }
 
-    public int move(String from, String to) {
+    public int move(String from, String to) throws InvalidMoveException{
         return 0;
     }
 
