@@ -38,10 +38,10 @@ class Board {
 
                     default -> p = null;
                 }
-
                 grid.put(s, p);
             }
         }
+        Piece.grid = this.grid;
     }
 
     public void initBoard() {
@@ -75,11 +75,17 @@ class Board {
             return;
         }
 
-        int status = p.move(from, to);
-        if(status == -1) return;
-        grid.put(from, null);
-        grid.put(to, p);
-        drawBoard();
+        try {
+            int status = p.move(from, to);
+            if(status == -1) return;
+            grid.put(from, null);
+            grid.put(to, p);
+            drawBoard();
+        } catch (InvalidMoveException e) {
+            System.err.println(e);
+            drawBoard();
+        }
+        
     }
 
     public void printBoard() {

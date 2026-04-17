@@ -3,6 +3,7 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Board b = new Board();
+        //b.initBoard();
         b.drawBoard();
         Scanner s = new Scanner(System.in);
         while (true) { 

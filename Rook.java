@@ -6,6 +6,7 @@ class Rook extends Piece {
     
     @Override
     public int move(String from, String to) throws InvalidMoveException {
+        super.move(from, to);
         char fromChar = from.charAt(0);
         char toChar = to.charAt(0);
         int fromNum = (int) from.charAt(1);

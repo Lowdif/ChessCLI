@@ -6,6 +6,7 @@ class Knight extends Piece {
     
     @Override
     public int move(String from, String to) throws InvalidMoveException {
+        super.move(from, to);
         int dist = (int) (from.charAt(0) - to.charAt(0));
         int absDist = Math.abs(dist);
         int absFromTo = Math.abs((int) from.charAt(1) - (int) to.charAt(1));
