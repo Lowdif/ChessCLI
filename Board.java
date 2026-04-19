@@ -3,6 +3,7 @@ import java.util.HashMap;
 class Board {
     private String[][] gridNames = new String[8][8];
     private HashMap<String, Piece> grid = new HashMap<>();
+
     public Board() {
         for(int i = 0; i < gridNames.length; i++) {
             for(int j = 0; j < gridNames.length; j++) {

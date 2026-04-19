@@ -11,7 +11,7 @@ class Piece {
         else this.team = Piece.localTeam.WHITE;
     }
 
-    public int move(String from, String to) throws InvalidMoveException{
+    public int move(String from, String to) throws InvalidMoveException {
         // protection from taking pieces in the same team
         if(grid.get(to) != null && grid.get(to).getTeam() == this.getTeam()) throw new InvalidMoveException("Invalid move when trying to move %s from %s to %s".formatted(toString(), from, to));
         
